@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Arabic:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=LXGW+WenKai+Mono+TC&display=swap");
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(251, 245, 229);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 124, 35) 75%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 253, 226);
+}
+
+/*rgb(73, 15, 39)*/
+
+/*rgb(255,253,226)*/
+/*rgb(32, 58, 85)*/
+/* rgb(212,199,183) */
+/*rgb(126, 138, 151)*/
+
+/* rgb(245, 163, 49) */
+
+:root {
+  --colorI: 187, 124, 35;
+  --colorII: 218, 193, 170;
+  --colorIII: 240, 233, 225;
+
+  --textColorI: 187, 124, 35;
+  --textColorII: 124, 72, 49;
+  --textColorIII: 126, 138, 151;
+
+  --swiper-navigation-color: rgba(150, 150, 150, 0.5); /* لون السهم */
+  --swiper-pagination-color: rgba(150, 150, 150, 0.5); /* لون النقاط */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-family: "Tajawal", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 100vh !important;
+  width: 100vw !important;
+  direction: rtl;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow: auto;
+
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.glass-effect-I {
+  background: rgba(187, 124, 35, 0.4); /* شفافية */
+  backdrop-filter: blur(10px) !important; /* عمل الـ blur */
+  -webkit-backdrop-filter: blur(10px) !important; /* دعم للمتصفحات القديمة */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* حواف شفافة */
+}
+
+.glass-effect-II {
+  background: rgba(251, 245, 229, 0.8); /* شفافية */
+  backdrop-filter: blur(20px) !important; /* عمل الـ blur */
+  -webkit-backdrop-filter: blur(10px) !important; /* دعم للمتصفحات القديمة */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* حواف شفافة */
+}
+
+.glass-effect-III {
+  background: rgba(251, 245, 229, 0.5); /* شفافية */
+  backdrop-filter: blur(15px) !important; /* عمل الـ blur */
+  -webkit-backdrop-filter: blur(15px) !important; /* دعم للمتصفحات القديمة */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* حواف شفافة */
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+input {
+  accent-color: rgb(187, 124, 35);
+}
+
+.App {
+  display: flex;
+  position: relative;
+  height: 100% !important;
+}
+
+.app-body {
+  width: 100%;
+  height: 100% !important;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sideBar {
+  position: relative;
+  min-width: 250px !important;
+  width: 250px !important;
+  height: 100vh;
+  background: rgb(187, 124, 35, 0.05);
+  box-shadow: -2px 0px 5px rgba(187, 124, 35, 0.2);
+  border: 0px solid rgba(187, 124, 35, 1);
+  position: relative;
+  overflow-x: visible !important;
+  overflow-y: auto !important;
+  color: rgb(32, 58, 85) !important;
+  transition: transform 0.3s ease-in-out;
+}
+.sideBar-trigger {
+  color: rgb(32, 58, 85) !important;
+  position: fixed; /* ثابت بحيث يبقى خارج الـ sideBar */
+  top: 20px;
+  right: 220px; /* خلي الزر خارج الشريط الجانبي */
+  background: white;
+  padding: 20px 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(120, 120, 120, 0.8);
+  transition: all 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/*
+rgb(187, 124, 35)
+rgb(187, 124, 35)
+*/
+@media screen and (max-width: 768px) {
+  .App {
+    /* width: calc(100% + 250px); */
+  }
+  .sideBar {
+    overflow-x: visible;
+  }
+  .sideBar-hide {
+    transform: translateX(250px);
+  }
+  .sideBar-trigger-collapseed {
+    transform: translateX(220px) rotate(180deg);
+    background: rgb(187, 124, 35) !important;
+    color: white !important;
+  }
+  .app-body {
+    position: fixed !important;
+  }
+  .sideBar {
+    z-index: 4;
+  }
+  .sideBar-trigger,
+  .appBody-trigger {
+    z-index: 5;
+  }
+}
+
+.sideBar-trigger-flip {
+  color: white;
+  opacity: 1;
+}
+
+.appBody-trigger {
+  color: white !important;
+  position: absolute; /* ثابت بحيث يبقى خارج الـ sideBar */
+  top: 20px;
+  right: 0px; /* خلي الزر خارج الشريط الجانبي */
+  background: rgb(187, 124, 35);
+  padding: 20px 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(120, 120, 120, 0.8);
+  transition: all 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.appBody-trigger-flip {
+  color: white !important;
+  transform: translateX(-250px);
+}
+
+.wrapping {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.wrapping:hover {
+  opacity: 1;
+}
+.wrapping:hover .btn-clr-close {
+  color: white !important;
+}
+.wrapping .btn-clr-close:hover {
+  color: red !important;
+  background: rgba(200, 200, 200, 0.9) !important;
+}
+
+.input-field {
+  border: rgba(190, 190, 190, 1) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(170, 170, 170, 0.3);
+  outline: none;
+  padding: 3px 10px;
+}
+
+.button-I {
+  border: none;
+  border-radius: 0px;
+  transition: transform 0.15s ease-in-out;
+  box-shadow: 0px 0px 3px rgba(150, 150, 150, 1);
+  font-size: 20px !important;
+}
+.button-I:hover {
+  transform: translateY(-2px);
+}
+.button-I:active {
+  transform: translateY(0px);
+}
+
+.btn-clr-I {
+  background: rgba(26, 151, 57, 0.8);
+  cursor: pointer;
+  color: white;
+}
+.btn-clr-I:hover {
+  background: rgba(18, 189, 60, 0.8);
+}
+
+.btn-clr-II {
+  color: white !important;
+  background: linear-gradient(
+    225deg,
+    rgb(187, 124, 35) 30%,
+    rgb(187, 124, 35) 75%
+  );
+}
+.btn-clr-II:hover {
+  background: rgb(187, 124, 35);
+}
+
+.btn-clr-save {
+  color: rgb(142, 142, 142) !important;
+}
+.btn-clr-save:hover {
+  color: rgb(22, 169, 6) !important;
+}
+
+.btn-clr-close {
+  color: rgb(142, 142, 142) !important;
+}
+.btn-clr-close:hover {
+  color: rgb(189, 10, 150) !important;
+}
+
+.btn-delete {
+  color: gray;
+}
+.btn-delete:hover {
+  color: red;
+}
+/*backgrounds*/
+.bg-I {
+  background: linear-gradient(
+    225deg,
+    rgba(255, 253, 226, 0) 30%,
+    rgba(119, 205, 255, 0) 100%
+  );
+  color: rgb(187, 124, 35) !important;
+}
+.bg-II {
+  background: linear-gradient(
+    225deg,
+    rgb(187, 124, 35) 30%,
+    rgb(187, 124, 35) 100%
+  );
+  color: white !important;
+}
+
+/* colors */
+.color-I {
+  color: rgb(187, 124, 35);
+}
+.color-II {
+  color: rgb(32, 58, 85);
+}
+
+.color-III {
+  color: rgb(8, 103, 212);
+}
+.color-gray {
+  color: rgb(136, 136, 136);
+}
+
+/* font sizes */
+.fs-4 {
+  font-size: 20px;
+}
+
+.fw-normal {
+  font-weight: normal !important;
+}
+
+.artical-card {
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid rgba(130, 130, 130, 0.3);
+}
+/* selection card*/
+
+.selection-card {
+  background: rgba(255, 255, 255, 1) !important;
+}
+.selection-card-item:hover {
+  background: rgba(var(--colorII), 1) !important;
+}
